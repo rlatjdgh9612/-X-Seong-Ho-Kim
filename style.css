@@ -1,0 +1,98 @@
+/* 이서윤체 폰트 적용을 위한 코드 */
+@font-face {
+    font-family: "LeeSeoyun";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+/* body태그 자체에 css 요소 부여 */
+body {
+	font-family: "LeeSeoyun";
+	margin: 0;
+	display: flex;
+	justify-content: center;
+
+    background-image: url("./Train.jpeg");
+    background-repeat : no-repeat;
+    background-size : cover;
+}
+/*사진과 프레임 전체를 감쌀 너비를 만드는 Main Container*/
+.Container{
+    width: 390px;
+    background-color: blanchedalmond;
+    height: 100%;
+}
+/*사진 전체 영역에 대한 스타일링 표시*/
+.photos{
+    margin-top: 15px;
+}
+/*photo-frame 각각에 대한 스타일링 표시*/
+.photo-frame{
+    background-color: white;
+    margin: 10px 15px;
+    height: 200px;
+    background-size : cover;
+
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#image1{
+    background-image: url("/img01.jpeg");
+}
+#image2{
+    background-image: url("./img02.jpeg");
+}
+#image3{
+    background-image: url("./img03.jpeg");
+}
+#image4{
+    background-image: url("./img04.jpeg");
+}
+/*photo-description*/
+.photo-description{
+    background-color: black;
+    color: white;
+
+    width: fit-content;
+    padding: 0 20px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%);
+    left: 50%;
+
+    opacity: 0;
+}
+/*사진에서 멀어졌을때 텍스트가 보여짐*/
+.showText{
+    /* opacity : 투명도를 의미함! 즉, 100% 투명하기 때문에 텍스트가 안보여짐 */
+    opacity: 0;
+}
+/*사진에 댔을때 텍스트가 없어짐*/
+.hideText{
+    /* transition : 나타날 때 0.5초동안 천천히 나타나는 효과를 주라는 의미함 */
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+/*아래 영역에 있는 하단 텍스트*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*f-title 스타일링*/
+.f-title{
+    font-size: 30px;
+    font-weight: 800;
+    color: black
+}
+/*f-date 스타일링*/
+.f-date{
+    font-size: 20px;
+    color: black
+}
